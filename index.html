@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventify - Plataforma de Gerenciamento de Eventos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Botão de Modo Escuro -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="eventifylogo2.PNG" alt="Eventify Logo" class="logo-img" style="height: 120px;">
+                <span></span>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="navMenu">
+                    <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#features"><i class="fas fa-star"></i> Recursos</a></li>
+                    <li><a href="#how-it-works"><i class="fas fa-cogs"></i> Como Funciona</a></li>
+                    <li><a href="#events"><i class="fas fa-calendar-check"></i> Eventos</a></li>
+                    <li><a href="#pricing"><i class="fas fa-tag"></i> Planos</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons" id="authButtons">
+                <button class="btn btn-secondary" id="loginBtn">Entrar</button>
+                <button class="btn btn-primary" id="signupBtn">Cadastrar</button>
+            </div>
+            <div class="user-menu" id="userMenu" style="display: none;">
+                <span id="userName" style="color: var(--white); margin-right: 15px;"></span>
+                <button class="btn btn-secondary" id="logoutBtn">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Transforme sua experiência com eventos</h1>
+            <p>O Eventify é a plataforma completa para criação, gerenciamento e participação em eventos incríveis. Conecte-se, compartilhe e viva momentos inesquecíveis.</p>
+            <div class="cta-buttons">
+               <a href="#create-event" class="btn btn-primary" id="heroSignupBtn">Criar um Evento</a>
+                <a href="#events" class="btn btn-secondary">Explorar Eventos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recursos Incríveis</h2>
+                <p>Descubra tudo o que o Eventify oferece para organizadores e participantes de eventos</p>
+            </div>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-plus"></i>
+                    </div>
+                    <h3>Criação de Eventos</h3>
+                    <p>Crie eventos personalizados com facilidade, adicionando todos os detalhes importantes para seus participantes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Venda de Ingressos</h3>
+                    <p>Gerencie ingressos gratuitos e pagos com nosso sistema integrado e seguro de pagamentos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Análises em Tempo Real</h3>
+                    <p>Acompanhe o desempenho do seu evento com métricas detalhadas e relatórios acionáveis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Check-in Digital</h3>
+                    <p>Sistema de check-in rápido e eficiente utilizando QR Code para melhor experiência dos participantes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Divulgação Integrada</h3>
+                    <p>Compartilhe seu evento nas redes sociais diretamente da plataforma e aumente seu alcance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Feedback dos Participantes</h3>
+                    <p>Colete avaliações e comentários pós-evento para melhorar continuamente suas experiências.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>Como Funciona</h2>
+                <p>Veja como é fácil criar e gerenciar eventos com o Eventify</p>
+            </div>
+            <div class="steps">
+                <div class="connector"></div>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Crie sua Conta</h3>
+                    <p>Registre-se gratuitamente como organizador ou participante em poucos minutos.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Configure seu Evento</h3>
+                    <p>Adicione detalhes, datas, localização e personalize a aparência do seu evento.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Divulgue e Venda</h3>
+                    <p>Compartilhe seu evento e comece a vender ingressos ou aceitar inscrições.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Gerencie e Acompanhe</h3>
+                    <p>Controle participantes, envie comunicados e acompanhe métricas em tempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que dizem sobre nós</h2>
+                <p>Veja depoimentos de organizadores e participantes que usam o Eventify</p>
+            </div>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="quote">
+                        <p>O Eventify revolucionou a forma como organizamos nossos eventos corporativos. A plataforma é intuitiva e as ferramentas de análise nos ajudam a tomar decisões melhores.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Ana Silva">
+                        <div class="author-info">
+                            <h4>Ana Silva</h4>
+                            <p>Gerente de Eventos - TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">
+                        <p>Como participante, adoro a facilidade de encontrar e me inscrever em eventos. O check-in digital é super prático e o histórico me ajuda a acompanhar todos os eventos que participei.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Oliveira">
+                        <div class="author-info">
+                            <h4>Carlos Oliveira</h4>
+                            <p>Participante frequente</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">
+                        <p>Organizar nosso festival cultural ficou muito mais fácil com o Eventify. A personalização da página do evento e a integração com redes sociais aumentaram nosso público em 40%.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Mariana Costa">
+                        <div class="author-info">
+                            <h4>Mariana Costa</h4>
+                            <p>Diretora - Festival Arte Viva</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Planos e Preços</h2>
+                <p>Escolha o plano que melhor atende às suas necessidades</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Básico</h3>
+                    <div class="price">R$0<span>/mês</span></div>
+                    <ul class="pricing-features">
+                        <li>1 evento ativo por vez</li>
+                        <li>Até 100 participantes</li>
+                        <li>Check-in digital via QR code</li>
+                        <li>Emissão de certificados básicos</li>
+                        <li>Suporte por e-mail</li>
+                    </ul>
+                    <button class="btn btn-secondary">Começar Grátis</button>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>Profissional</h3>
+                    <div class="price">R$99<span>/mês</span></div>
+                    <ul class="pricing-features">
+                        <li>5 eventos ativos simultâneos</li>
+                        <li>Até 1.000 participantes por evento</li>
+                        <li>Check-in com QR Code + app para organização</li>
+                        <li>Métricas avançadas</li>
+                        <li>Suporte prioritário</li>
+                        <li>Integração com redes sociais</li>
+                    </ul>
+                    <button class="btn btn-primary" id="proPlanBtn">Assinar Agora</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Empresarial</h3>
+                    <div class="price">R$299<span>/mês</span></div>
+                    <ul class="pricing-features">
+                        <li>10 eventos por vez</li>
+                        <li>2000 participantes</li>
+                        <li>Vendas de ingressos com taxas personalizadas</li>
+                        <li>Acesso a API para integração com CRM e ERP</li>
+                        <li>Suporte 24/7</li>
+                        <li>API de integração</li>
+                        <li>Treinamento dedicado</li>
+                        <li>Consultoria exclusiva para organização de eventos</li>
+                    </ul>
+                    <button class="btn btn-secondary" id="enterprisePlanBtn">Fale Conosco</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section events" id="events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Eventos em Destaque</h2>
+                <p>Confira nossa programação completa</p>
+            </div>
+            <div class="event-filters">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="music">Música</button>
+                <button class="filter-btn" data-category="theater">Teatro</button>
+                <button class="filter-btn" data-category="sports">Esportes</button>
+                <button class="filter-btn" data-category="workshop">Workshops</button>
+            </div>
+            <div class="event-cards" id="eventCards">
+                <!-- Event cards will be generated by JavaScript -->
+            </div>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="#" class="btn btn-secondary">Ver Todos os Eventos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seating Section -->
+    <section class="section seating-section" id="seating" style="display: none;">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="seating-title">Seleção de Assentos</h2>
+                <p id="seating-subtitle">Escolha seus lugares para o evento</p>
+            </div>
+            <div class="seating-container">
+                <div class="stage">PALCO</div>
+                <div class="seating-map" id="seatingMap">
+                    <!-- Seats will be generated by JavaScript -->
+                </div>
+                <div class="booking-summary">
+                    <div class="form-group">
+                        <label for="pcdCheckbox">
+                            <input type="checkbox" id="pcdCheckbox"> Sou PCD (Pessoa com Deficiência)
+                        </label>
+                        <p class="pcd-note" style="font-size: 12px; color: var(--medium-gray);">Ao marcar esta opção, você terá direito a desconto e assentos especiais.</p>
+                        
+                        <div id="pcdDocumentUpload" style="display: none; margin-top: 15px;">
+                            <label>Envie um comprovante (CIPD, laudo médico ou BPC):</label>
+                            <input type="file" id="pcdDocument" accept=".pdf,.jpg,.png">
+                            <small>Formatos aceitos: PDF, JPG ou PNG (até 5MB).</small>
+                        </div>
+                    </div>
+                    <h3>Resumo da Reserva</h3>
+                    <div class="booking-details">
+                        <p><strong>Evento:</strong> <span id="summary-event">-</span></p>
+                        <p><strong>Data:</strong> <span id="summary-date">-</span></p>
+                        <p><strong>Local:</strong> <span id="summary-location">-</span></p>
+                        <p><strong>Assentos:</strong> <span id="summary-seats">Nenhum selecionado</span></p>
+                        <p><strong>Preço unitário:</strong> R$ <span id="summary-price">0,00</span></p>
+                    </div>
+                    <div class="booking-total">
+                        <span>Total:</span>
+                        <span>R$ <span id="summary-total">0,00</span></span>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn btn-cancel" id="cancelBooking">Cancelar</button>
+                        <button class="btn btn-confirm" id="confirmBooking">Confirmar Reserva</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Create Event Section -->
+    <section class="section" id="create-event" style="display: none;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Criar Novo Evento</h2>
+                <p>Preencha os detalhes do seu evento abaixo</p>
+            </div>
+            <form id="eventForm" class="create-event-form">
+                <h3>Informações do Evento</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventTitle">Título do Evento *</label>
+                        <input type="text" id="eventTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventCategory">Categoria *</label>
+                        <select id="eventCategory" required>
+                            <option value="">Selecione uma categoria</option>
+                            <option value="music">Música</option>
+                            <option value="theater">Teatro</option>
+                            <option value="sports">Esportes</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="conference">Conferência</option>
+                            <option value="exhibition">Exposição</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventDescription">Descrição do Evento *</label>
+                    <textarea id="eventDescription" required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventDate">Data do Evento *</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventTime">Horário *</label>
+                        <input type="time" id="eventTime" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventLocation">Localização *</label>
+                        <input type="text" id="eventLocation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventPrice">Preço (R$) *</label>
+                        <input type="number" id="eventPrice" min="0" step="0.01" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventImage">URL da Imagem do Evento</label>
+                        <input type="url" id="eventImage" placeholder="https://exemplo.com/imagem.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label for="eventCapacity">Capacidade Máxima</label>
+                        <input type="number" id="eventCapacity" min="1" placeholder="Número de participantes">
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelEvent">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Criar Evento</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div class="confirmation-modal" id="confirmationModal" style="display: none;">
+        <div class="confirmation-content">
+            <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Reserva Confirmada!</h3>
+            <p>Sua reserva foi confirmada com sucesso. Os detalhes foram enviados para o seu e-mail.</p>
+            <button class="btn btn-primary" id="closeConfirmation">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <p>Tem alguma dúvida ou sugestão? Fale conosco!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <p>Estamos sempre disponíveis para ajudar você com qualquer dúvida sobre nossa plataforma ou serviços.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Endereço</h4>
+                                <p>Av. Paulista, 1000 - São Paulo, SP</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telefone</h4>
+                                <p>(11) 1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>E-mail</h4>
+                                <p>contato@eventify.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Sobre a Eventify</h3>
+                    <p>A plataforma completa para criação, gerenciamento e participação em eventos incríveis.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#features">Recursos</a></li>
+                        <li><a href="#how-it-works">Como Funciona</a></li>
+                        <li><a href="#pricing">Planos</a></li>
+                        <li><a href="#events">Eventos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Para Organizadores</h3>
+                    <ul>
+                        <li><a href="#">Criar Evento</a></li>
+                        <li><a href="#">Preços</a></li>
+                        <li><a href="#">Recursos</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Central de Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Assine nossa newsletter para receber novidades e promoções.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Eventify. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Login/Signup Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Entrar na Eventify</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <div class="auth-tab active" id="loginTab">Entrar</div>
+                    <div class="auth-tab" id="signupTab">Cadastrar</div>
+                </div>
+                <form class="auth-form active" id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">E-mail</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Senha</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <div class="form-actions">
+                        <div class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Lembrar-me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                    </div>
+                    <button type="submit" class="submit-btn">Entrar</button>
+                    <div class="social-login">
+                        <p>Ou entre com</p>
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-btn google"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="switch-form">
+                        Não tem uma conta? <a href="#" id="switchToSignup">Cadastre-se</a>
+                    </div>
+                </form>
+                <form class="auth-form" id="signupForm">
+                    <div class="form-group">
+                        <label for="signupName">Nome Completo</label>
+                        <input type="text" id="signupName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">E-mail</label>
+                        <input type="email" id="signupEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Senha</label>
+                        <input type="password" id="signupPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupConfirmPassword">Confirmar Senha</label>
+                        <input type="password" id="signupConfirmPassword" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Cadastrar</button>
+                    <div class="social-login">
+                        <p>Ou cadastre-se com</p>
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-btn google"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="switch-form">
+                        Já tem uma conta? <a href="#" id="switchToLogin">Entrar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        <!-- Modal de Confirmação de Compra de Plano -->
+    <div class="modal" id="planConfirmationModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="planModalTitle">Confirmação de Assinatura</h3>
+                <button class="close-modal" id="closePlanModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h4 id="planConfirmationMessage">Sua assinatura foi processada com sucesso!</h4>
+                <p id="planDetails">Detalhes do seu plano aparecerão aqui.</p>
+                <p>Em instantes você receberá um e-mail com todos os detalhes da sua assinatura.</p>
+                <div class="text-center" style="margin-top: 30px;">
+                    <button class="btn btn-primary" id="confirmPlanOk">Entendi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
