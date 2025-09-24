@@ -1532,6 +1532,7 @@ footer {
         padding: 0 20px;
     }
     
+    /* Header mobile responsivo */
     .header-container {
         position: relative;
         flex-wrap: nowrap;
@@ -1541,9 +1542,10 @@ footer {
     }
     
     .logo-img {
-        height: 90px;
+        height: 80px;
     }
     
+    /* Navbar mobile */
     nav {
         position: absolute;
         top: 100%;
@@ -1561,10 +1563,11 @@ footer {
         box-shadow: var(--shadow);
         border-radius: 0 0 var(--border-radius) var(--border-radius);
         margin: 0;
+        position: static;
     }
     
     nav ul.show {
-        display: flex;
+        display: flex !important;
     }
     
     nav ul li {
@@ -1572,40 +1575,71 @@ footer {
     }
     
     nav ul li a {
-        padding: 12px 20px;
+        padding: 15px 20px;
         border-radius: 8px;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
         justify-content: flex-start;
-        font-size: 15px;
+        font-size: 16px;
+        width: 100%;
     }
     
+    /* Botão do menu mobile */
     .mobile-menu-btn {
-        display: block;
+        display: block !important;
         order: 1;
         margin-right: 15px;
+        z-index: 1000;
     }
     
-    .auth-buttons {
-        gap: 10px;
+    /* Botões de autenticação mobile */
+    .header-container .auth-buttons {
         order: 2;
         flex-shrink: 0;
+        gap: 8px !important;
+        flex-direction: row !important;
+        width: auto !important;
     }
     
-    .auth-buttons .btn {
-        padding: 10px 16px;
-        font-size: 14px;
-        min-width: 80px;
-        height: 40px;
-        white-space: nowrap;
+    .header-container .auth-buttons .btn {
+        padding: 8px 16px !important;
+        font-size: 13px !important;
+        min-width: 75px !important;
+        height: 38px !important;
+        width: auto !important;
     }
     
+    /* User menu mobile */
+    .user-menu {
+        order: 2;
+        flex-shrink: 0;
+        gap: 10px;
+    }
+    
+    .user-menu .btn {
+        padding: 8px 16px;
+        font-size: 13px;
+        height: 38px;
+    }
+    
+    #userName {
+        font-size: 13px;
+        max-width: 80px;
+    }
+    
+    /* Hero Section Mobile */
     .hero {
         min-height: 80vh;
-        padding: 100px 0 60px;
+        padding: 120px 0 60px;
     }
     
     .hero h1 {
         font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
     }
     
     .cta-buttons {
@@ -1617,8 +1651,11 @@ footer {
     .cta-buttons .btn {
         width: 100%;
         max-width: 280px;
+        padding: 15px 30px;
+        font-size: 16px;
     }
     
+    /* Sections Mobile */
     .section {
         padding: 60px 0;
     }
@@ -1627,28 +1664,59 @@ footer {
         margin-bottom: 50px;
     }
     
+    .section-title h2 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .section-title p {
+        font-size: 1rem;
+    }
+    
+    /* Features Mobile */
     .features {
         grid-template-columns: 1fr;
         gap: 30px;
     }
     
+    .feature-card {
+        padding: 35px 25px;
+    }
+    
+    /* Steps Mobile */
     .steps {
         grid-template-columns: 1fr;
         gap: 30px;
     }
     
+    .step {
+        padding: 35px 25px;
+    }
+    
+    /* Testimonials Mobile */
     .testimonial-cards {
         grid-template-columns: 1fr;
         gap: 30px;
     }
     
+    .testimonial-card {
+        padding: 35px 25px;
+    }
+    
+    /* Pricing Mobile */
     .pricing-cards {
         grid-template-columns: 1fr;
         gap: 30px;
     }
     
+    .pricing-card {
+        padding: 40px 30px;
+    }
+    
+    /* Events Mobile */
     .event-cards {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
     
     .event-filters {
@@ -1662,6 +1730,7 @@ footer {
         font-size: 14px;
     }
     
+    /* Forms Mobile */
     .form-row {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1674,11 +1743,15 @@ footer {
     
     .form-actions .btn {
         width: 100%;
+        padding: 15px;
+        font-size: 16px;
     }
     
+    /* Seating Mobile */
     .seating-map {
         grid-template-columns: repeat(8, 1fr);
         gap: 6px;
+        max-width: 100%;
     }
     
     .seat {
@@ -1690,16 +1763,41 @@ footer {
     .seating-legend {
         gap: 15px;
         flex-wrap: wrap;
+        font-size: 12px;
     }
     
     .booking-actions {
         flex-direction: column;
+        gap: 15px;
     }
     
-    .footer-container {
+    .booking-actions .btn {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    /* Contact Mobile */
+    .contact-container {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+    
+    .contact-form {
+        padding: 30px 25px;
+    }
+    
+    /* Footer Mobile */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        max-width: 300px;
+        margin: 20px auto 0;
+    }
+}
 }
 
 @media (max-width: 600px) {
@@ -1729,24 +1827,29 @@ footer {
         padding: 0 15px;
     }
     
+    /* Header Extra Small Mobile */
     .header-container {
         gap: 10px;
         min-height: 65px;
+        padding: 5px 0;
     }
     
     .logo-img {
-        height: 80px;
+        height: 70px;
     }
     
-    .auth-buttons {
-        gap: 8px;
+    .mobile-menu-btn {
+        padding: 6px;
+        font-size: 20px;
+        margin-right: 10px;
     }
     
-    .auth-buttons .btn {
-        padding: 8px 14px;
-        font-size: 13px;
-        min-width: 70px;
-        height: 36px;
+    /* Auth buttons extra small */
+    .header-container .auth-buttons .btn {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+        min-width: 65px !important;
+        height: 34px !important;
     }
     
     .user-menu .btn {
@@ -1756,37 +1859,45 @@ footer {
     }
     
     #userName {
-        font-size: 12px;
-        max-width: 70px;
+        font-size: 11px;
+        max-width: 60px;
     }
     
-    .mobile-menu-btn {
-        padding: 6px;
-        font-size: 18px;
-        margin-right: 10px;
-    }
-    
+    /* Nav menu items smaller */
     nav ul li a {
-        padding: 10px 15px;
-        font-size: 14px;
+        padding: 12px 15px;
+        font-size: 15px;
     }
     
+    /* Content adjustments */
     .section {
         padding: 40px 0;
     }
     
     .section-title h2 {
-        font-size: 2rem;
+        font-size: 1.9rem;
+    }
+    
+    .hero {
+        padding: 100px 0 50px;
     }
     
     .hero h1 {
         font-size: 2.2rem;
+        margin-bottom: 18px;
     }
     
     .hero p {
         font-size: 1rem;
+        margin-bottom: 25px;
     }
     
+    .cta-buttons .btn {
+        padding: 14px 25px;
+        font-size: 15px;
+    }
+    
+    /* Cards and components */
     .feature-card,
     .step,
     .testimonial-card,
@@ -1794,6 +1905,11 @@ footer {
         padding: 30px 20px;
     }
     
+    .event-card .event-info {
+        padding: 25px 20px;
+    }
+    
+    /* Modal adjustments */
     .modal-content {
         margin: 20px auto;
         width: 95%;
@@ -1803,6 +1919,56 @@ footer {
         padding: 30px 20px;
     }
     
+    /* Seating extra small */
+    .seating-map {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 4px;
+    }
+    
+    .seat {
+        width: 28px;
+        height: 28px;
+        font-size: 9px;
+    }
+    
+    /* Form improvements */
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 14px 16px;
+        font-size: 16px; /* Evita zoom no iOS */
+    }
+    
+    .contact-form {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Ultra small screens */
+    .container {
+        padding: 0 12px;
+    }
+    
+    .logo-img {
+        height: 65px;
+    }
+    
+    .header-container .auth-buttons .btn {
+        padding: 5px 10px !important;
+        font-size: 11px !important;
+        min-width: 55px !important;
+        height: 32px !important;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.7rem;
+    }
+    
     .seating-map {
         grid-template-columns: repeat(5, 1fr);
     }
@@ -1810,28 +1976,14 @@ footer {
     .seat {
         width: 25px;
         height: 25px;
-        font-size: 9px;
-    }
-}
-
-@media (max-width: 360px) {
-    .auth-buttons .btn {
-        padding: 6px 12px;
-        font-size: 12px;
-        min-width: 60px;
-        height: 34px;
+        font-size: 8px;
     }
     
-    .logo-img {
-        height: 80px;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .seating-map {
-        grid-template-columns: repeat(4, 1fr);
+    .feature-card,
+    .step,
+    .testimonial-card,
+    .pricing-card {
+        padding: 25px 15px;
     }
 }
 
