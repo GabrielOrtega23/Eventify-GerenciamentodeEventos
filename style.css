@@ -1532,34 +1532,97 @@ footer {
         padding: 0 20px;
     }
     
-    /* Header Mobile Reorganizado - Logo esquerda, botões centro */
+    /* Forçar layout mobile */
     .header-container {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
         min-height: 70px;
-        gap: 15px;
+        gap: 10px;
     }
     
-    /* Logo à esquerda */
+    /* Logo à esquerda - forçado */
     .logo {
-        order: 1;
+        order: 1 !important;
         flex-shrink: 0;
     }
     
     .logo-img {
-        height: 70px;
+        height: 70px !important;
     }
     
-    /* Botões de autenticação no centro */
-    .header-container .auth-buttons {
-        order: 2;
-        flex: 1;
-        justify-content: center;
-        flex-direction: row !important;
+    /* FORÇAR MENU HAMBÚRGUER A APARECER */
+    .mobile-menu-btn {
+        display: block !important;
+        order: 3 !important;
+        background: var(--primary-gold) !important;
+        border: 2px solid white !important;
+        color: var(--dark-bg) !important;
+        font-size: 20px !important;
+        cursor: pointer !important;
+        padding: 10px 12px !important;
+        border-radius: 8px !important;
+        width: 50px !important;
+        height: 50px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .mobile-menu-btn:hover {
+        background: white !important;
+        color: var(--primary-gold) !important;
+    }
+    
+    /* Esconder navegação desktop */
+    nav ul {
+        display: none !important;
+    }
+    
+    nav ul.show {
+        display: flex !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: var(--dark-purple) !important;
+        flex-direction: column !important;
+        padding: 15px !important;
+        gap: 5px !important;
+        box-shadow: var(--shadow) !important;
+        border-radius: 0 0 12px 12px !important;
+        z-index: 999 !important;
+        margin: 0 !important;
+        margin-top: 5px !important;
+    }
+    
+    nav ul.show li {
+        width: 100% !important;
+    }
+    
+    nav ul.show li a {
+        padding: 15px 20px !important;
+        border-radius: 8px !important;
+        color: white !important;
+        font-size: 16px !important;
+        display: flex !important;
+        align-items: center !important;
         gap: 10px !important;
-        width: auto !important;
+        width: 100% !important;
+        text-decoration: none !important;
+    }
+    
+    nav ul.show li a:hover {
+        background: rgba(255, 215, 0, 0.2) !important;
+        color: var(--primary-gold) !important;
+    }
+    
+    /* Botões no centro */
+    .header-container .auth-buttons {
+        order: 2 !important;
+        flex: 1 !important;
+        display: flex !important;
+        justify-content: center !important;
+        flex-direction: row !important;
+        gap: 12px !important;
     }
     
     .header-container .auth-buttons .btn {
@@ -1567,92 +1630,14 @@ footer {
         font-size: 14px !important;
         min-width: 75px !important;
         height: 38px !important;
-        width: auto !important;
     }
     
-    /* User menu no centro quando logado */
     .user-menu {
-        order: 2;
-        flex: 1;
-        justify-content: center;
-        gap: 15px;
-    }
-    
-    .user-menu .btn {
-        padding: 10px 16px;
-        font-size: 13px;
-        height: 38px;
-    }
-    
-    #userName {
-        font-size: 13px;
-        max-width: 100px;
-    }
-    
-    /* Menu hambúrguer à direita */
-    .mobile-menu-btn {
-        display: block !important;
-        order: 3;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-        padding: 8px;
-        border-radius: 8px;
-        transition: background 0.3s ease;
-    }
-    
-    .mobile-menu-btn:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
-    
-    /* Navbar dropdown - mais para cima */
-    nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 999;
-    }
-    
-    nav ul {
-        display: none;
-        background: var(--dark-purple);
-        flex-direction: column;
-        padding: 15px;
-        gap: 5px;
-        box-shadow: var(--shadow);
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
-        margin: 0;
-        margin-top: -5px; /* Mais para cima */
-    }
-    
-    nav ul.show {
+        order: 2 !important;
+        flex: 1 !important;
         display: flex !important;
-    }
-    
-    nav ul li {
-        width: 100%;
-    }
-    
-    nav ul li a {
-        padding: 12px 20px;
-        border-radius: 8px;
-        margin-bottom: 3px;
-        justify-content: flex-start;
-        font-size: 15px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        transition: all 0.3s ease;
-    }
-    
-    nav ul li a:hover {
-        background: rgba(255, 215, 0, 0.15);
-        color: var(--primary-gold);
-        transform: translateX(5px);
+        justify-content: center !important;
+        gap: 12px !important;
     }
     
     /* Hero Section Mobile */
