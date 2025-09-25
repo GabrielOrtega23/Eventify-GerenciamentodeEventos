@@ -1532,26 +1532,86 @@ footer {
         padding: 0 20px;
     }
     
-    /* Header mobile responsivo */
+    /* Header Mobile Reorganizado */
     .header-container {
         position: relative;
-        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: 50px 1fr 140px;
         align-items: center;
         min-height: 70px;
         gap: 15px;
+    }
+    
+    /* Menu hambúrguer à esquerda */
+    .mobile-menu-btn {
+        display: block !important;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+        justify-self: start;
+    }
+    
+    .mobile-menu-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Logo no centro */
+    .logo {
+        justify-self: center;
+        display: flex;
+        align-items: center;
     }
     
     .logo-img {
         height: 80px;
     }
     
-    /* Navbar mobile */
+    /* Botões de autenticação à direita */
+    .header-container .auth-buttons {
+        justify-self: end;
+        flex-direction: row !important;
+        gap: 8px !important;
+        width: auto !important;
+    }
+    
+    .header-container .auth-buttons .btn {
+        padding: 8px 14px !important;
+        font-size: 13px !important;
+        min-width: 65px !important;
+        height: 36px !important;
+        width: auto !important;
+    }
+    
+    /* User menu à direita */
+    .user-menu {
+        justify-self: end;
+        gap: 10px;
+    }
+    
+    .user-menu .btn {
+        padding: 8px 14px;
+        font-size: 12px;
+        height: 36px;
+    }
+    
+    #userName {
+        font-size: 12px;
+        max-width: 70px;
+    }
+    
+    /* Navbar dropdown */
     nav {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         z-index: 999;
+        grid-column: 1 / -1;
     }
     
     nav ul {
@@ -1559,11 +1619,10 @@ footer {
         background: var(--dark-purple);
         flex-direction: column;
         padding: 20px;
-        gap: 5px;
+        gap: 8px;
         box-shadow: var(--shadow);
         border-radius: 0 0 var(--border-radius) var(--border-radius);
         margin: 0;
-        position: static;
     }
     
     nav ul.show {
@@ -1581,49 +1640,14 @@ footer {
         justify-content: flex-start;
         font-size: 16px;
         width: 100%;
-    }
-    
-    /* Botão do menu mobile */
-    .mobile-menu-btn {
-        display: block !important;
-        order: 1;
-        margin-right: 15px;
-        z-index: 1000;
-    }
-    
-    /* Botões de autenticação mobile */
-    .header-container .auth-buttons {
-        order: 2;
-        flex-shrink: 0;
-        gap: 8px !important;
-        flex-direction: row !important;
-        width: auto !important;
-    }
-    
-    .header-container .auth-buttons .btn {
-        padding: 8px 16px !important;
-        font-size: 13px !important;
-        min-width: 75px !important;
-        height: 38px !important;
-        width: auto !important;
-    }
-    
-    /* User menu mobile */
-    .user-menu {
-        order: 2;
-        flex-shrink: 0;
+        display: flex;
+        align-items: center;
         gap: 10px;
     }
     
-    .user-menu .btn {
-        padding: 8px 16px;
-        font-size: 13px;
-        height: 38px;
-    }
-    
-    #userName {
-        font-size: 13px;
-        max-width: 80px;
+    nav ul li a:hover {
+        background: rgba(255, 215, 0, 0.15);
+        color: var(--primary-gold);
     }
     
     /* Hero Section Mobile */
